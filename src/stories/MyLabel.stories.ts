@@ -18,6 +18,7 @@ const meta = {
     size: { control: 'inline-radio' },
     color: { control: 'inline-radio' },
     fontColor: { control: 'color' },
+    backgroundColor: { control: 'color' },
   },
 } satisfies Meta<typeof MyLabel>;
 
@@ -55,6 +56,15 @@ export const CustomFontColor: Story = {
     args: {
         label: 'Custom Color Label',
         fontColor: 'blue',
+    },
+};
+
+export const CustomBackgroudColor: Story = {
+    args: {
+        size: 'h2',
+        label: 'Custom BackgroundColor Label',
+        fontColor: '#eeeeee',
+        backgroundColor: '#000000'
     },
 };
 
