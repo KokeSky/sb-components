@@ -17,17 +17,13 @@ BREAKING CHANGE: The graphiteWidth option has been removed.
 The default graphite width of 10mm is always used for performance reasons.	Major Breaking Release
 (Note that the BREAKING CHANGE: token must be in the footer of the commit)
 
- git add .
+git add .
 
- git commit -m "feat: github actions configurado-3"
+git commit -m "feat: github actions configurado-7"
 
- git commit -m "feat: github actions configurado-4"
+git push
 
- git commit -m "feat: github actions configurado-6"
-
- git push
-
- "copyfiles": "^2.3.0",
+"copyfiles": "^2.3.0",
 
 
 
