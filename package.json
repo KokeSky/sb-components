@@ -12,7 +12,7 @@
     "type": "git"
   },
   "peerDependencies": {
-    "react": ">=18",
+    "react": ">=16",
     "typescript": ">=5.0.0"
   },
   "release": {
