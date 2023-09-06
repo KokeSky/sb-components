@@ -15,8 +15,8 @@ const meta = {
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
-  },
-} satisfies Meta<typeof Button>;
+  }
+} as Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

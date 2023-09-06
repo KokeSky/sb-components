@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import './mylabel.css';
 
-interface Props {
+export interface Props {
     /**
     * Text to display
     */

@@ -1,0 +1,13 @@
+import type { StoryObj } from '@storybook/react';
+declare const meta: import("@storybook/types").ComponentAnnotations<import("@storybook/react/dist/types-0a347bb9").R, import("../components/MyLabel").Props>;
+export default meta;
+type Story = StoryObj<typeof meta>;
+export declare const Basic: Story;
+export declare const AllCaps: Story;
+export declare const Secondary: Story;
+export declare const CustomColor: Story;
+export declare const CustomFontColor: Story;
+export declare const CustomBackgroudColor: Story;
+export declare const Large: Story;
+export declare const Medium: Story;
+export declare const Small: Story;

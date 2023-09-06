@@ -20,7 +20,7 @@ const meta = {
     fontColor: { control: 'color' },
     backgroundColor: { control: 'color' },
   },
-} satisfies Meta<typeof MyLabel>;
+} as Meta<typeof MyLabel>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
