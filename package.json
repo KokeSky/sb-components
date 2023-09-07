@@ -67,6 +67,9 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   },
+  "engines": {
+    "node": "^16.10.0 || >=18.0.0"
+  },
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
