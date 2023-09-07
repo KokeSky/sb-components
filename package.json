@@ -26,7 +26,7 @@
   "scripts": {
     "dev": "vite",
     "buildn": "yarn clean && tsc",
-    "build": "yarn clean && tsc && yarn copy-files",
+    "build": "yarn clean && tsc && yarn copy-files0 && yarn copy-files1 && yarn copy-files2",
     "buildan": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
@@ -34,14 +34,17 @@
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_a86a9e850be45a0",
     "clean": "rimraf dist/",
-    "copy-files": "copyfiles -u 1 src/**/*.css dist/"
+    "copy-files0": "cp -r ./src/*.css ./dist/",
+    "copy-files1": "cp -r ./src/stories/*.css ./dist/stories/",
+    "copy-files2": "cp -r ./src/components/*.css ./dist/components/",
+    "copy-filesa": "copyfiles -u 1 src/**/*.css dist/"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
-  },  
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -53,8 +56,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },  
+  },
   "dependencies": {
+    "node-fetch": "2.6.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -74,12 +78,12 @@
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "chromatic": "^7.0.0",
+    "copyfiles": "^2.3.0",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.13",
     "rimraf": "^5.0.1",
-    "copyfiles": "^2.3.0",
     "semantic-release": "^21.1.1",
     "storybook": "7.4.0",
     "typescript": "^5.0.2",
