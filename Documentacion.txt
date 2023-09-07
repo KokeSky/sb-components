@@ -19,7 +19,7 @@ The default graphite width of 10mm is always used for performance reasons.	Major
 
 git add .
 
-git commit -m "feat: github actions configurado-13"
+git commit -m "feat: github actions configurado-15"
 
 git push
 
@@ -29,5 +29,123 @@ git push
     "node": "^16.10.0 || >=18.0.0"
   },
 
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "ES5",
+    "useDefineForClassFields": true,
+    "lib": [
+      "ESNext", 
+      "DOM", 
+      "DOM.Iterable"
+    ],
+    "declaration": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "commonjs",
+    /* Bundler mode */
+    "moduleResolution": "Node16",
+    // "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "jsx": "react-jsx",
+    /* Linting */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "include": [
+    "src"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
+
+
+{
+  "name": "jliv-my-storybook-components",
+  "private": false,
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "typings": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "homepage": "https://jorgekokeibarra.com",
+  "repository": {
+    "url": "https://github.com/KokeSky/sb-components",
+    "type": "git"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "typescript": ">=5.0.0"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "buildn": "yarn clean && tsc",
+    "build": "yarn clean && tsc && yarn copy-files",
+    "buildan": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_a86a9e850be45a0",
+    "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 1 src/**/*.css dist/"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "7.4.0",
+    "@storybook/addon-interactions": "7.4.0",
+    "@storybook/addon-links": "7.4.0",
+    "@storybook/addon-onboarding": "1.0.8",
+    "@storybook/blocks": "7.4.0",
+    "@storybook/react": "7.4.0",
+    "@storybook/react-vite": "7.4.0",
+    "@storybook/testing-library": "0.2.0",
+    "@types/node-fetch": "^2.6.4",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "chromatic": "^7.0.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "eslint-plugin-storybook": "^0.6.13",
+    "rimraf": "^5.0.1",
+    "copyfiles": "^2.3.0",
+    "semantic-release": "^21.1.1",
+    "storybook": "7.4.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ],
+  "readme": "ERROR: No README data found!",
+  "_id": "my-storybook@0.0.0"
+}
 
 

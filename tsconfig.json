@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-    "target": "ES5",
-    "useDefineForClassFields": true,
+    "target": "es5",
     "lib": [
-      "ESNext", 
-      "DOM", 
-      "DOM.Iterable"
+      "dom",
+      "dom.iterable",
+      "esnext"
     ],
     "declaration": true,
     "allowJs": true,
@@ -17,19 +16,13 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "commonjs",
-    /* Bundler mode */
-    "moduleResolution": "Node16",
-    // "allowImportingTsExtensions": true,
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": false,
-    "jsx": "react-jsx",
-    /* Linting */
-    "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "jsx": "react-jsx"
   },
   "include": [
     "src"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  ]
 }
