@@ -19,11 +19,15 @@ The default graphite width of 10mm is always used for performance reasons.	Major
 
 git add .
 
-git commit -m "feat: github actions configurado-11"
+git commit -m "feat: github actions configurado-12"
 
 git push
 
 "copyfiles": "^2.3.0",
+
+"engines": {
+    "node": "^16.10.0 || >=18.0.0"
+  },
 
 
 
